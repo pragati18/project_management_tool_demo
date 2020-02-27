@@ -14,7 +14,7 @@ import {
   AppSidebarMinimizer,
   AppBreadcrumb2 as AppBreadcrumb,
   AppSidebarNav2 as AppSidebarNav,
-} from '@coreui/react';
+} from './es';
 // sidebar nav config
 import navigation from '../../sidebar';
 // routes config
