@@ -48,7 +48,8 @@
     "react-test-renderer": "^16.8.6",
     "reactstrap": "^8.0.0",
     "simple-line-icons": "^2.4.1",
-    "yarn": "^1.22.0"
+    "yarn": "^1.22.0",
+    "@coreui/react": "^2.5.1",
   },
   "devDependencies": {
     "css-loader": "^3.4.2",
