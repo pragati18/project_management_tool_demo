@@ -1,4 +1,4 @@
-@import "./package/scss/coreui.scss";
+@import "./package/scss/core.scss";
 
 .dates {
     display:flex;
@@ -58,4 +58,35 @@
 
 /*Tags Css End*/
 
+.footer_button{
+    text-align:center!important;
+}
 
+/*view button*/
+.view_button {
+    color: #fff!important;
+    background-color: #19ac68!important;
+    border-color:#2bb142fa!important;
+  }
+
+  .edit_button {
+    color: #fff!important;
+    background-color: #1985ac!important;
+    border-color: #187da0!important;
+  }
+
+  .deactive_button {
+    color: #fff!important;
+    background-color: #f86c6b!important;
+    border-color: #f86c6b!important;
+  }
+  .date_fix {
+    margin-top: -3%;
+  }
+
+  .background-image-login {
+      background-image: url("https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+.opacity-login {
+    opacity: 0.9;
+  }

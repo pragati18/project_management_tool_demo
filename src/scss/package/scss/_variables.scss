@@ -1,4 +1,4 @@
-// Import CoreUI default colors
+
 @import "variables/colors";
 
 // Customized Bootstrap variables
@@ -7,8 +7,6 @@
 // Import Bootstrap variables after customization for use below
 @import "bootstrap/functions"; // from bootstrap node_modules
 @import "bootstrap/variables"; // from bootstrap node_modules
-
-// CoreUI Variables
 
 // stylelint-disable
 $enable-sidebar-nav-rounded:          false !default;

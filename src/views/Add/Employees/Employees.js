@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TagsInput from './TagsInput';
 
 import {
-  Badge,
   Button,
   Card,
   CardBody,
@@ -70,7 +69,7 @@ class Employees extends Component {
                     </Col>
                     <Col xs="12" md="9">
                       <Input type="password" id="password-input" name="password-input" placeholder="Password" autoComplete="new-password" />
-                      <FormText className="help-block">Please enter a complex password</FormText>
+                      <FormText className="help-block">Please enter a password</FormText>
                     </Col>
                   </FormGroup>
                   <FormGroup row>
@@ -107,42 +106,53 @@ class Employees extends Component {
                   </FormGroup>
                   <FormGroup row>
                     <Col md="3">
-                    <strong><Label htmlFor="date-input">Start Date </Label> </strong>
+                      <strong><Label htmlFor="text-input">Enter Logs:</Label></strong>
+                    </Col>
+                  <Col xs="12" md="9">
+                      <Input type="text" id="fname" name="fname" placeholder="Enter Intinal Logs " />
+                      <FormText color="muted">Enter enter initilal logs for specific date(optional)</FormText>
+                    </Col>
+                    </FormGroup>
+
+                    <FormGroup row>
+                    <Col md="3">
+                    <strong><Label htmlFor="date-input">Enter log Date </Label> </strong>
                     </Col>
                     <Col xs="12" md="9">
-                      <Input type="date" id="date-input" name="date-input" placeholder="date" />
+                      <Input type="date" id="log-input" name="date-input" placeholder="date" />
                     </Col>
                   </FormGroup>
-               
+
                   <FormGroup row>
                     <Col md="3">
-                      <Label htmlFor="textarea-input">Skills</Label>
+                      <strong><Label htmlFor="textarea-input">Skills</Label></strong>
                     </Col>
                     <Col xs="12" md="9">
-                      <div className="App">
+                      <div>
                           <TagsInput selectedTags={selectedTags}/>
                     </div>
                     </Col>
-                  </FormGroup>  
-
-                  <hr/>
-                  <hr/>
-                  <strong>OR</strong>
-                  <hr/>
+                  </FormGroup>
 
                   <FormGroup row>
                     <Col md="3">
-                      <Label htmlFor="file-input">File input</Label>
+                    <strong><Label htmlFor="select">Select Project</Label> </strong>
                     </Col>
                     <Col xs="12" md="9">
-                      <Input type="file" id="file-input" name="file-input" />
+                      <Input type="select" name="select" id="select">
+                        <option value="0">Please select</option>
+                        <option value="1">Tapclicks</option>
+                        <option value="2">Project Management</option>
+                        <option value="3">Internal Tool</option>
+                      </Input>
                     </Col>
                   </FormGroup>
+
                 </Form>
               </CardBody>
-              <CardFooter>
-                <Button type="submit" size="sm" color="primary"><i className="fa fa-dot-circle-o"></i> Submit</Button>
-                <Button type="reset" size="sm" color="danger"><i className="fa fa-ban"></i> Reset</Button>
+              <CardFooter className="footer_button">
+                <Button type="submit" size="xl" color="primary"><i className="nav-icon icon-check"></i> Submit</Button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button type="reset" size="xl" color="danger"><i className="nav-icon icon-speedometer"></i> Reset</Button>
               </CardFooter>
             </Card>
            

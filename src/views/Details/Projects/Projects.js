@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from 'reactstrap';
 import { MDBDataTable } from 'mdbreact';
+import Fdates from './Fdates';
 
 /*class Dashboard extends Component {
   constructor(props) {
@@ -146,8 +147,8 @@ class Projects extends Component {
       },
 
       {
-        label: 'Delete',
-        field: 'delete',
+        label: 'Deactive',
+        field: 'deactive',
         sort: 'asc',
         width: 150
       },
@@ -162,9 +163,9 @@ class Projects extends Component {
         start_date: '1st Jan 2020',
         end_date: '28th Feb 2020',
         pname: 'Rajesh',
-        view: <Button onClick={this.clickHandler}>View</Button>,
-        edit: <Button onClick={this.clickHandler}>Edit</Button>,
-        delete: <Button onClick={this.clickHandler}>Delete</Button>
+        view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
+        edit: <Button className="edit_button" onClick={this.clickHandler}><i className="nav-icon icon-pencil"></i>  Edit</Button>,
+        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
        {
         srno:'2',
@@ -172,9 +173,9 @@ class Projects extends Component {
         start_date: '1st Jan 2020',
         end_date: '28th Feb 2020',
         pname: 'Pragati',
-        view: <Button onClick={this.clickHandler}>View</Button>,
-        edit: <Button onClick={this.clickHandler}>Edit</Button>,
-        delete: <Button onClick={this.clickHandler}>Delete</Button>
+        view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
+        edit: <Button className="edit_button" onClick={this.clickHandler}><i className="nav-icon icon-pencil"></i>  Edit</Button>,
+        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
        {
          srno:'3',
@@ -182,9 +183,9 @@ class Projects extends Component {
         start_date: '1st Jan 2020',
         end_date: '28th Feb 2020',
         pname: 'Pragati',
-        view: <Button onClick={this.clickHandler}>View</Button>,
-        edit: <Button onClick={this.clickHandler}>Edit</Button>,
-        delete: <Button onClick={this.clickHandler}>Delete</Button>
+        view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
+        edit: <Button className="edit_button" onClick={this.clickHandler}><i className="nav-icon icon-pencil"></i>  Edit</Button>,
+        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
       
     ]
@@ -195,13 +196,16 @@ class Projects extends Component {
   
 
   render() {
-    return (
+    return [
+      <Fdates />,
       <MDBDataTable
       striped
       hover
       data={this.data}
     />
-    );
+
+    
+    ];
   }
 }
 

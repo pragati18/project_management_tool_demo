@@ -1,3 +1,3 @@
-import DefaultLayout from './DefaultLayout';
+import Dashboard from './Dashboard';
 
-export { DefaultLayout };
+export { Dashboard };

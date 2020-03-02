@@ -1,17 +1,13 @@
 .nav-tabs {
   .nav-link {
-    color: $gray-600;
-    &:hover {
-      cursor: pointer;
-    }
     &.active {
-      color: $gray-800;
+      color: 'gray';
       background: #fff;
-      border-color: $border-color;
+      border-color: 'gray';
       border-bottom-color: #fff;
       &:focus {
         background: #fff;
-        border-color: $border-color;
+        border-color: 'gray';
         border-bottom-color: #fff;
       }
     }
@@ -21,9 +17,9 @@
 .tab-content {
   margin-top: -1px;
   background: #fff;
-  border: 1px solid $border-color;
+  border: 1px solid gray;
   .tab-pane {
-    padding: $spacer;
+    padding: 0;
   }
 }
 
@@ -37,7 +33,7 @@
 .nav-fill {
   .nav-link {
     background-color: #fff;
-    border-color: $border-color;
+    border-color: 'gray';
   }
   .nav-link + .nav-link {
     margin-left: -1px;
@@ -45,7 +41,7 @@
   .nav-link.active {
     margin-top: -1px;
     // margin-left: 0;
-    border-top: 2px solid $primary;
+    border-top: 2px solid gray;
   }
 }
 
