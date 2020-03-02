@@ -1,7 +1,8 @@
 import React, { Component} from 'react';
 import { Button } from 'reactstrap';
 import { MDBDataTable } from 'mdbreact';
-import Fdates from '../Projects/Fdates';
+import Pdates from '../Employees/pdates';
+import { Link} from 'react-router-dom';
 
 class EEmployees extends Component {
 
@@ -45,14 +46,14 @@ class EEmployees extends Component {
         width: 100
       },
       {
-        label: 'Add Logs',
-        field: 'add_logs',
+        label: 'Update',
+        field: 'edit',
         sort: 'asc',
         width: 150
       },
       {
-        label: 'Deactive',
-        field: 'deactive',
+        label: 'Delete',
+        field: 'delete',
         sort: 'asc',
         width: 150
       },
@@ -67,8 +68,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '25',
         skills: 'HTML, CSS, ReactJS',
-        add_logs: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-plus"></i>  Add</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
        {
         srno:'2',
@@ -76,8 +77,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '35',
         skills: 'Ajax, CSS, HTML',
-        add_logs: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-plus"></i>  Add</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
       {
         srno:'3',
@@ -85,8 +86,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '25',
         skills: 'HTML, CSS, ReactJS',
-        add_logs: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-plus"></i>  Add</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
        {
         srno:'4',
@@ -94,8 +95,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '35',
         skills: 'Ajax, CSS, HTML',
-        add_logs: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-plus"></i>  Add</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
       {
         srno:'5',
@@ -103,8 +104,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '25',
         skills: 'HTML, CSS, ReactJS',
-        add_logs: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-plus"></i>  Add</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
        {
         srno:'6',
@@ -112,8 +113,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '35',
         skills: 'Ajax, CSS, HTML',
-        add_logs: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-plus"></i>  Add</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
       },
       
      
@@ -127,7 +128,7 @@ class EEmployees extends Component {
 
   render() {
     return[ 
-      <Fdates/>,
+      <Pdates/>,
       <MDBDataTable
       striped
       hover

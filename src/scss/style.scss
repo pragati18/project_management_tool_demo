@@ -4,6 +4,10 @@
     display:flex;
 }
 
+.form_dates {
+  display: inherit;
+}
+
 .badge{
     line-height: 2!important;
 }
@@ -14,6 +18,11 @@
 }
 .pagination {
     float: right;
+}
+
+.nav-link {
+  display: block;
+  padding: 0!important;
 }
 
 

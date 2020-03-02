@@ -45,13 +45,38 @@ class Projects extends Component {
               </CardHeader>
               <CardBody>
                 <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
+                  
+                <strong>Upload the File save all the project details:</strong>
+                  <hr/>
+
+                  <FormGroup row>
+                    <Col md="3">
+                      <strong><Label htmlFor="file-input">File input</Label></strong>
+                    </Col>
+                    <Col xs="12" md="9">
+                      <Input type="file" id="file-input" name="file-input" />
+                    </Col>
+                  </FormGroup>
+
+                  <hr/>
+                  <strong>Or you can also add the details using below form:</strong>
+                  <hr/>
                   <FormGroup row>
                     <Col md="3">
                       <strong><Label htmlFor="text-input">Enter Project Name</Label></strong>
                     </Col>
                     <Col xs="12" md="9">
-                      <Input type="text" id="fname" name="fname" placeholder="Enter First name" />
+                      <Input type="text" id="pname" name="pname" placeholder="Enter First name" />
                       <FormText color="muted">Enter project name</FormText>
+                    </Col>
+                    </FormGroup>
+                    <FormGroup row>
+                    <Col md="3">
+                      <strong><Label htmlFor="text-input">Enter Project Manager Name</Label></strong>
+                    </Col>
+                    <Col xs="12" md="9">
+                      <Input type="text" id="pm_name" name="pm_name" placeholder="Enter First name" />
+                      <FormText color="muted">Enter project manager name</FormText>
                     </Col>
                     </FormGroup>
                   <FormGroup row>
@@ -72,24 +97,13 @@ class Projects extends Component {
                     </Col>
                   </FormGroup>
                
-                  <hr/>
-                  <strong>OR</strong>
-                  <hr/>
-
-                  <FormGroup row>
-                    <Col md="3">
-                      <strong><Label htmlFor="file-input">File input</Label></strong>
-                    </Col>
-                    <Col xs="12" md="9">
-                      <Input type="file" id="file-input" name="file-input" />
-                    </Col>
-                  </FormGroup>
-                </Form>
-              </CardBody>
               <CardFooter className="footer_button">
                 <Button type="submit" size="xl" color="primary"><i className="nav-icon icon-check"></i> Submit</Button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button type="reset" size="xl" color="danger"><i className="nav-icon icon-speedometer"></i> Reset</Button>
               </CardFooter>
+
+              </Form>
+              </CardBody>
             </Card>
            
           </Col>

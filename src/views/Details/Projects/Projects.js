@@ -1,95 +1,10 @@
 import React, { Component} from 'react';
-import {Badge, Card, CardBody, Col, Row, Table,} from 'reactstrap';
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from 'reactstrap';
 import { MDBDataTable } from 'mdbreact';
 import Fdates from './Fdates';
+import { Link} from 'react-router-dom';
 
-/*class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      startDate: new Date()
-    };
-   
-    this.handleChange = date => {
-      this.setState({
-        startDate: date
-      });
-    }
-  }
-  render() {
-
-    return (
-      <div className="animated fadeIn">
-        <Row>
-          <Col>
-            <Card>
-              <CardBody>
-                <br />  
-
-                <strong>Get Reports Weekly/ Monthly Wise</strong><br/>
-                <hr/>
-                <div className="dates">
-                  <strong> To:&nbsp;</strong> <DatePicker className = "start_date" maxDate={this.state.startDate} selected={this.state.startDate} onChange={this.handleChange}/>
-  
-                  <strong>&nbsp;&nbsp;&nbsp; Form:&nbsp;</strong> <DatePicker className = "end_date"  selected={this.state.startDate} />
-                 &nbsp;&nbsp;&nbsp;<Badge className="mr-3" color="warning"><i class="fa fa-pencil fa-lg"></i>  Apply  </Badge>
-                 </div>
-                <hr/>
-                <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
-                  <thead className="thead-light">
-                  <tr>
-                    <th className="text-center"><i className="icon-people"></i></th>
-                    <th>Project Name</th>
-                    <th className="text-center">Start Date</th>
-                    <th>End Date</th>
-                    <th className="text-center">Project Manager Name</th>
-                    <th>Actions</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    
-                    <td className="text-center">
-                    1. </td>
-                    <td>
-                      <div>Project Management Tool</div>
-                    </td>
-                    <td className="text-center">
-                      <div>23rd Jan 2020</div>
-                    </td>
-                    <td>
-                      <div>23rd Jan 2020</div>
-                    </td>
-                    <td className="text-center">
-                      <div>Pragati</div>
-                    </td>
-                    <td>
-                    <CardBody>
-                          <Badge className="mr-4" color="info"><i class="fa fa-eye fa-lg"></i>  View  </Badge>
-                          <Badge className="mr-4" color="warning"><i class="fa fa-pencil fa-lg"></i>  Update  </Badge>
-                          <Badge className="mr-4" color="danger"><i class = "fa fa-bitbucket fa-lg"></i>  Delete  </Badge>      
-                    </CardBody>
-                    </td>
-
-                  </tr>
-
-                  
-                  </tbody>
-                </Table>
-                
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </div>
-    );
-  }
-}
-
-export default Dashboard;*/
 class Projects extends Component {
 
   constructor(props) {
@@ -98,6 +13,10 @@ class Projects extends Component {
     //this.props.onClick();
     alert("Great Shot!");
   }
+
+  this.editclickHandler = () => {
+    //this.props.onClick();
+   }
 
   this.data = {
     columns: [
@@ -147,7 +66,7 @@ class Projects extends Component {
       },
 
       {
-        label: 'Deactive',
+        label: 'Status',
         field: 'deactive',
         sort: 'asc',
         width: 150
@@ -164,8 +83,8 @@ class Projects extends Component {
         end_date: '28th Feb 2020',
         pname: 'Rajesh',
         view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
-        edit: <Button className="edit_button" onClick={this.clickHandler}><i className="nav-icon icon-pencil"></i>  Edit</Button>,
-        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Active</Button>
       },
        {
         srno:'2',
@@ -174,8 +93,8 @@ class Projects extends Component {
         end_date: '28th Feb 2020',
         pname: 'Pragati',
         view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
-        edit: <Button className="edit_button" onClick={this.clickHandler}><i className="nav-icon icon-pencil"></i>  Edit</Button>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Deactive</Button>
       },
        {
          srno:'3',
@@ -184,8 +103,8 @@ class Projects extends Component {
         end_date: '28th Feb 2020',
         pname: 'Pragati',
         view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
-        edit: <Button className="edit_button" onClick={this.clickHandler}><i className="nav-icon icon-pencil"></i>  Edit</Button>,
-        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
+        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Active</Button>
       },
       
     ]

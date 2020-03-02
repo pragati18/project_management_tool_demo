@@ -34,18 +34,48 @@ class Header extends Component {
           </Nav>
 
         <Nav className="d-md-down-none" navbar>
-          <NavItem className="px-3">
-            <NavLink to="/details/projects" className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;&nbsp;&nbsp;Project Details</strong></NavLink>
-          </NavItem>
-          <NavItem className="px-3">
-            <Link to="/add/projects" className="nav-link"><strong><i className="nav-icon icon-plus"></i> &nbsp;&nbsp;&nbsp; Add Projects</strong></Link>
-          </NavItem>
-          <NavItem className="px-3">
-            <Link to="/details/employees" className="nav-link"><strong><i className="nav-icon icon-list"></i> &nbsp;&nbsp;&nbsp; Employee Details</strong></Link>
-          </NavItem>
-          <NavItem className="px-3">
-            <Link to="/add/employees" className="nav-link"><strong><i className="nav-icon icon-plus"></i> &nbsp;&nbsp;&nbsp; Add employees</strong></Link>
-          </NavItem>
+
+        <Nav className="ml-auto" navbar>
+          <UncontrolledDropdown nav direction="down">
+            <DropdownToggle nav>
+            <NavLink className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;Projects <i class="nav-icon icon-arrow-down"></i><i className="nav-icon icon-arrow-double-down"></i> </strong></NavLink>
+            </DropdownToggle>
+            <DropdownMenu left>
+            <DropdownItem><NavLink to="/details/projects" className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;Project Details</strong></NavLink></DropdownItem>
+              <DropdownItem><Link to="/add/projects" className="nav-link"><strong><i className="nav-icon icon-plus"></i> &nbsp;&nbsp;&nbsp; Add Projects</strong></Link></DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </Nav>&nbsp;&nbsp;&nbsp;
+
+
+        <Nav className="ml-auto" navbar>
+          <UncontrolledDropdown nav direction="down">
+            <DropdownToggle nav>
+            <NavLink className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;&nbsp;&nbsp;Employees <i class="nav-icon icon-arrow-down"></i><i className="nav-icon icon-arrow-double-down"></i> </strong></NavLink>
+            </DropdownToggle>
+            <DropdownMenu left>
+            <DropdownItem><NavLink to="/details/employees" className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;&nbsp;&nbsp;Employee Details</strong></NavLink></DropdownItem>
+              <DropdownItem><Link to="/add/logs" className="nav-link"><strong><i className="nav-icon icon-plus"></i> &nbsp;&nbsp;&nbsp; Add Employees Logs</strong></Link></DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </Nav>&nbsp;&nbsp;&nbsp;
+
+
+        <Nav className="ml-auto" navbar>
+          <UncontrolledDropdown nav direction="down">
+            <DropdownToggle nav>
+            <NavLink className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;&nbsp;&nbsp;Leaves <i class="nav-icon icon-arrow-down"></i><i className="nav-icon icon-arrow-double-down"></i> </strong></NavLink>
+            </DropdownToggle>
+            <DropdownMenu left>
+            <DropdownItem><NavLink to="/leaves/eleaves" className="nav-link" ><strong><i className="nav-icon icon-list"></i> &nbsp;&nbsp;&nbsp;Add Employee Leaves</strong></NavLink></DropdownItem>
+              <DropdownItem><Link to="/leaves/oleaves" className="nav-link"><strong><i className="nav-icon icon-plus"></i> &nbsp;&nbsp;&nbsp; Add Official Leaves</strong></Link></DropdownItem>
+
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </Nav>
+
+
+         
           
         </Nav>
         <Nav className="ml-auto" navbar>
@@ -55,8 +85,8 @@ class Header extends Component {
             </DropdownToggle>
             <DropdownMenu right>
               <DropdownItem header tag="div" className="text-center"><strong>Account</strong></DropdownItem>
-              <DropdownItem><i className="fa fa-user"></i> Profile</DropdownItem>
-              <DropdownItem><i className="fa fa-wrench"></i> Settings</DropdownItem>
+              <DropdownItem><Link to="/add/user" className="nav-link"><strong><i className="nav-icon icon-plus"></i> &nbsp;&nbsp;&nbsp; Add User</strong></Link></DropdownItem>
+
               <DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
