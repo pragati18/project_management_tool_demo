@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 
-import {
-
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Col,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
-const selectedTags = tags => console.log(tags);
+import {Button, Card, CardBody, CardFooter, CardHeader, Col, Form, FormGroup, FormText, Input, Label, Row} from 'reactstrap';
 
 class Logs extends Component {
   constructor(props) {
@@ -44,54 +29,37 @@ class Logs extends Component {
                 <strong>Add Employees Logs</strong>
               </CardHeader>
               <CardBody>
+              <h1>Upload the File Save All The</h1>
+              <h2>Employee's Logs</h2>
                 <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
-                  
-                <strong>Upload the File to add:</strong>
-                  <hr/>
-
-                  <FormGroup row>
-                    <Col md="3">
-                      <strong><Label htmlFor="file-input">File input</Label></strong>
-                    </Col>
-                    <Col xs="12" md="9">
-                      <Input type="file" id="file-input" name="file-input" />
-                    </Col>
+                  <FormGroup row className="center">
+                      <Col xs="12" md="12" >
+                        <Input className="center-block " type="file" id="file-input" name="file-input" />
+                      </Col>
                   </FormGroup>
-
-                  <hr/>
-                  <strong>Or you can also add the details using below form:</strong>
+                  <h2>OR</h2>
+                  <strong>You can also add the details using below form:</strong>
                   <hr/>
                   <FormGroup row>
-                    <Col md="3">
-                    <strong><Label htmlFor="select">Select Name</Label> </strong>
-                    </Col>
-                    <Col xs="12" md="9">
+                    <Col xs="12" md="4">
                       <Input type="select" name="select" id="select">
                         <option value="0">Select Name</option>
                         <option value="0">Pragati Gaikwad (ID - 12321)</option>
                         <option value="1">Rajesh Darak (ID - 12232)</option>
                         <option value="2">Saurabh Mahajan (ID -1234)</option>
                       </Input>
+                      <FormText color="muted">Select Name</FormText>
                     </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="3">
-                    <strong><Label htmlFor="date-input">Enter Date </Label> </strong>
+                    <Col xs="12" md="4">
+                      <Input type="date" id="log-date-input" name="start-date-input" placeholder="date" />
+                      <FormText color="muted">Select Date</FormText>
                     </Col>
-                    <Col xs="12" md="9">
-                      <Input type="date" id="start-date-input" name="start-date-input" placeholder="date" />
-                    </Col>
-                  </FormGroup>
-
-                  <FormGroup row>
-                    <Col md="3">
-                    <strong><Label htmlFor="date-input">Enter Logs </Label> </strong>
-                    </Col>
-                    <Col xs="12" md="9">
+                    <Col xs="12" md="4">
                     <Input type="number" id="logs" name="logs" placeholder="Enter Logs" />
+                    <FormText color="muted">Enter Logs Hours</FormText>
                     </Col>
                   </FormGroup>
-               
+                 
               <CardFooter className="footer_button">
                 <Button type="submit" size="xl" color="primary"><i className="nav-icon icon-check"></i> Submit</Button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button type="reset" size="xl" color="danger"><i className="nav-icon icon-speedometer"></i> Reset</Button>

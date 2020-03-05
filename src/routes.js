@@ -9,6 +9,7 @@ const EditProject = React.lazy(() => import('./views/Edit/Project'));
 const Oleaves = React.lazy(() => import('./views/Leaves/Official'));
 const Eleaves = React.lazy(() => import('./views/Leaves/Empleaves'));
 
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/add/user', name: 'Add User', component: User },
@@ -20,6 +21,7 @@ const routes = [
   {path: '/edit/project', name: 'Edit Project', component: EditProject},
   {path: '/leaves/eleaves', name: 'Employee Leaves', component: Eleaves},
   {path: '/leaves/oleaves', name: 'Official Leaves', component: Oleaves},
+  
 ];
 
 export default routes;

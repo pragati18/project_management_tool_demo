@@ -1,46 +1,11 @@
 import React, { Component } from 'react';
-import {
-  Button,
-
-  Col,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
+import {Button, Col, Form, FormGroup, FormText, Input, Label} from 'reactstrap';
 
 class Pdates extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-          startDate: new Date(),
-          endDate: new Date()
-        };
-       
-        this.handleStartChange = date => {
-          this.setState({
-            startDate: date,
-          });
-
-         
-      }
-
-      this.handleEndChange = date => {
-        this.setState({
-          endDate: date,
-        });
-    }
-  }
     render() {
         return (
 
         <div className="animated fadeIn">
-      
-              
-
                 <strong>Get Reports Weekly/ Monthly Wise</strong>
                 <hr/>
                 <div className="dates">

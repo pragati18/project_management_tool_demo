@@ -8,12 +8,10 @@ import {
   Col,
   Form,
   FormGroup,
-  FormText,
   Input,
   Label,
   Row,
 } from 'reactstrap';
-const selectedTags = tags => console.log(tags);
 
 class Employee extends Component {
   constructor(props) {
@@ -84,19 +82,16 @@ class Employee extends Component {
                     <strong><Label htmlFor="select">Role</Label> </strong>
                     </Col>
                     <Col xs="12" md="9">
-                    <Input type="text" id="lname" value="Gaikwad" name="lname" Value="Admin" />
+                    <Input type="text" id="role" name="role" Value="Admin" />
                     </Col>
                   </FormGroup>
-                
-
-                  
-
+  
                   <FormGroup row>
                     <Col md="3">
                       <strong><Label htmlFor="textarea-input">Skills</Label></strong>
                     </Col>
                     <Col xs="12" md="9">
-                    <Input type="text" id="lname" value="Gaikwad" name="lname" Value="{HTML, CSS, JAVA}" />
+                    <Input type="text" id="skills" name="skills" Value="{HTML, CSS, JAVA}" />
                     </Col>
                   </FormGroup>
 

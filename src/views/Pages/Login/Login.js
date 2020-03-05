@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
+
 class Login extends Component {
+
+  handleClick = () => {
+    this.props.history.push("/details/projects");
+}
+
   render() {
     return (
       <div className="app flex-row align-items-center background-image-login">
@@ -33,9 +38,9 @@ class Login extends Component {
                       </InputGroup>
                       <Row>
                         <Col xs="6">
-                        <Link to="/register">
-                          <Button color="primary" className="px-4">Login</Button>
-                          </Link>
+                       
+                          <Button color="primary" className="px-4" onClick={this.handleClick}>Login</Button>
+                       
                         </Col>
                        
                       </Row>

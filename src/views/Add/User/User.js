@@ -1,21 +1,5 @@
 import React, { Component } from 'react';
-import TagsInput from './TagsInput';
-
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Col,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
-const selectedTags = tags => console.log(tags);
+import {Button, Card, CardBody, CardFooter, CardHeader, Col, Form, FormGroup, FormText, Input, Label, Row} from 'reactstrap';
 
 class User extends Component {
   constructor(props) {

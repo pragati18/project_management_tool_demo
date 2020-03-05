@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 
-import {
-
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Col,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
-const selectedTags = tags => console.log(tags);
+import {Button, Card, CardBody, CardFooter, CardHeader, Col, Form, FormGroup, FormText, Input, Label, Row} from 'reactstrap';
 
 class Eleaves extends Component {
   constructor(props) {
@@ -44,60 +29,40 @@ class Eleaves extends Component {
                 <strong>Add Employee Details</strong>
               </CardHeader>
               <CardBody>
+              <h1>Upload the File Save All The</h1>
+              <h2>Employee's Leaves Details</h2>
                 <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
                   
-                <strong>Upload the File save all the employee leaves details:</strong>
-                  <hr/>
-
-                  <FormGroup row>
-                    <Col md="3">
-                      <strong><Label htmlFor="file-input">File input</Label></strong>
-                    </Col>
-                    <Col xs="12" md="9">
-                      <Input type="file" id="file-input" name="file-input" />
-                    </Col>
-                  </FormGroup>
-
-                  <hr/>
-                  <strong>Or you can also add the details using below form:</strong>
+                    <FormGroup row className="center">
+                      <Col xs="12" md="12" >
+                        <Input className="center-block " type="file" id="file-input" name="file-input" />
+                      </Col>
+                     </FormGroup>
+                     <h2>OR</h2>
+                  <strong>You can also add the details using below form:</strong>
                   <hr/>
                   <FormGroup row>
-                    <Col md="3">
-                      <strong><Label htmlFor="text-input">Enter Employee Id</Label></strong>
-                    </Col>
-                    <Col xs="12" md="9">
+                    
+                    <Col xs="12" md="6">
                       <Input type="text" id="pname" name="pname" placeholder="Enter First name" />
                       <FormText color="muted">Enter Employee Id</FormText>
                     </Col>
-                    </FormGroup>
-                  <FormGroup row>
-                    <Col md="3">
-                      <strong><Label htmlFor="text-input">Enter Employee Name</Label></strong>
-                    </Col>
-                    <Col xs="12" md="9">
+                    <Col xs="12" md="6">
                       <Input type="text" id="pname" name="pname" placeholder="Enter First name" />
                       <FormText color="muted">Enter name</FormText>
                     </Col>
                     </FormGroup>
-                 
                   <FormGroup row>
-                    <Col md="3">
-                    <strong><Label htmlFor="date-input">Enter Start Date </Label> </strong>
-                    </Col>
-                    <Col xs="12" md="9">
+                    <Col xs="12" md="6">
                       <Input type="date" id="start-date-input" name="start-date-input" placeholder="date" />
+                      <FormText color="muted">Select Date</FormText>
+                    </Col>
+                    <Col xs="12" md="6">
+                      <Input type="date" id="end-date-input" name="end-date-input" placeholder="date" />
+                      <FormText color="muted">Select End Date(optional)</FormText>
                     </Col>
                   </FormGroup>
 
-                  <FormGroup row>
-                    <Col md="3">
-                    <strong><Label htmlFor="date-input">Enter End Date </Label> </strong>
-                    </Col>
-                    <Col xs="12" md="9">
-                      <Input type="date" id="end-date-input" name="end-date-input" placeholder="date" />
-                    </Col>
-                  </FormGroup>
-               
               <CardFooter className="footer_button">
                 <Button type="submit" size="xl" color="primary"><i className="nav-icon icon-check"></i> Submit</Button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button type="reset" size="xl" color="danger"><i className="nav-icon icon-speedometer"></i> Reset</Button>

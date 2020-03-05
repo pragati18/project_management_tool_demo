@@ -1,39 +1,8 @@
 import React, { Component } from 'react';
-import {
-  Button,
-
-  Col,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
+import {Button, Col, Form, FormGroup, FormText, Input, Label} from 'reactstrap';
 
 class Fdates extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          startDate: new Date(),
-          endDate: new Date()
-        };
-       
-        this.handleStartChange = date => {
-          this.setState({
-            startDate: date,
-          });
-
-         
-      }
-
-      this.handleEndChange = date => {
-        this.setState({
-          endDate: date,
-        });
-    }
-  }
     render() {
         return (
 
@@ -60,10 +29,7 @@ class Fdates extends Component {
                         <Input type="date" id="log-input" name="date-input" placeholder="date" />
                           <FormText className="help-block">Please enter end date</FormText>
                         </Col>
-                      </FormGroup>
-
-                
-                      
+                      </FormGroup>  
                         <FormGroup row>&nbsp;&nbsp;&nbsp;&nbsp;
                         <Col md="8">
                         <Button type="submit" size="xl" color="primary">Submit</Button>
@@ -73,8 +39,7 @@ class Fdates extends Component {
 
                  </div>
                 <hr/>
-
-               
+      
       </div>
             
         );

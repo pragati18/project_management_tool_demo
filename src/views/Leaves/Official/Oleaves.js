@@ -1,38 +1,8 @@
 import React, { Component } from 'react';
 
-import {
-
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Col,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label,
-  Row,
-} from 'reactstrap';
-const selectedTags = tags => console.log(tags);
+import {Button, Card, CardBody, CardFooter, CardHeader,Col,Form,FormGroup,Input,Label,Row,} from 'reactstrap';
 
 class Oleaves extends Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.toggleFade = this.toggleFade.bind(this);
-  }
-
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
-  }
-
-  toggleFade() {
-    this.setState((prevState) => { return { fadeIn: !prevState }});
-  }
-  
 
   render() {
     return (
@@ -44,17 +14,13 @@ class Oleaves extends Component {
                 <strong>Add Official Leaves</strong>
               </CardHeader>
               <CardBody>
+              <h1>Upload the File Save All The</h1>
+              <h2>Company Leaves Details</h2>
                 <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
-                  
-                <strong>Upload the File save all the Official leaves details:</strong>
-                  <hr/>
 
-                  <FormGroup row>
-                    <Col md="3">
-                      <strong><Label htmlFor="file-input">File input</Label></strong>
-                    </Col>
-                    <Col xs="12" md="9">
-                      <Input type="file" id="file-input" name="file-input" />
+                  <FormGroup row className="center">
+                    <Col xs="12" md="12" >
+                      <Input className="center-block " type="file" id="file-input" name="file-input" />
                     </Col>
                   </FormGroup>
 
