@@ -82,7 +82,7 @@ var ScrollBar = function (_Component) {
         }
       });
       this._handlerByEvent = {};
-      this._ps.destroy();
+      //this._ps.destroy();
       this._ps = null;
     }
   }, {

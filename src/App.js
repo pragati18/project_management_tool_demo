@@ -6,6 +6,7 @@ const loading = () => <div className="animated fadeIn pt-3 text-center">Loading.
 
 // Containers
 const DefaultLayout = React.lazy(() => import('./containers/DefaultLayout/Dashboard'));
+//const DefaultLayout = React.lazy(() => import('./views/Pages/Login/Login'));
 
 const Login = React.lazy(() => import('./views/Pages/Login'));
 class App extends Component {
